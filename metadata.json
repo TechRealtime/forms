@@ -1,0 +1,5 @@
+{
+  "name": "Enterprise Forms",
+  "description": "A comprehensive platform for creating, managing, and analyzing dynamic forms and data collection campaigns. Features separate portals for administrators and users, real-time analytics, and seamless Firebase integration.",
+  "requestFramePermissions": []
+}

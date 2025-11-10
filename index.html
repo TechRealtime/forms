@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Forms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --theme-primary-50: 239 246 255; --theme-primary-100: 219 234 254; --theme-primary-200: 191 219 254; --theme-primary-300: 147 197 253; --theme-primary-400: 96 165 250; --theme-primary-500: 59 130 246; --theme-primary-600: 37 99 235; --theme-primary-700: 29 78 216; --theme-primary-800: 30 64 175; --theme-primary-900: 30 58 138; --theme-primary-950: 23 37 84;
+        
+        --background: 255 255 255;
+        --foreground: 23 37 84;
+        --card: 255 255 255;
+        --card-foreground: 23 37 84;
+        --popover: 255 255 255;
+        --popover-foreground: 23 37 84;
+        --primary: 37 99 235;
+        --primary-foreground: 239 246 255;
+        --secondary: 243 244 246;
+        --secondary-foreground: 23 37 84;
+        --muted: 243 244 246;
+        --muted-foreground: 107 114 128;
+        --accent: 243 244 246;
+        --accent-foreground: 23 37 84;
+        --destructive: 239 68 68;
+        --destructive-foreground: 250 250 250;
+        --border: 229 231 235;
+        --input: 229 231 235;
+        --ring: 37 99 235;
+        --radius: 0.5rem;
+      }
+      .dark {
+        --background: 17 24 39;
+        --foreground: 219 234 254;
+        --card: 31 41 55;
+        --card-foreground: 219 234 254;
+        --popover: 31 41 55;
+        --popover-foreground: 219 234 254;
+        --primary: 96 165 250;
+        --primary-foreground: 23 37 84;
+        --secondary: 55 65 81;
+        --secondary-foreground: 219 234 254;
+        --muted: 55 65 81;
+        --muted-foreground: 156 163 175;
+        --accent: 55 65 81;
+        --accent-foreground: 219 234 254;
+        --destructive: 185 28 28;
+        --destructive-foreground: 219 234 254;
+        --border: 55 65 81;
+        --input: 55 65 81;
+        --ring: 96 165 250;
+      }
+      body {
+        background-color: rgb(var(--background));
+        color: rgb(var(--foreground));
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              border: 'rgb(var(--border))',
+              input: 'rgb(var(--input))',
+              ring: 'rgb(var(--ring))',
+              background: 'rgb(var(--background))',
+              foreground: 'rgb(var(--foreground))',
+              primary: {
+                DEFAULT: 'rgb(var(--primary))',
+                foreground: 'rgb(var(--primary-foreground))'
+              },
+              secondary: {
+                DEFAULT: 'rgb(var(--secondary))',
+                foreground: 'rgb(var(--secondary-foreground))'
+              },
+              destructive: {
+                DEFAULT: 'rgb(var(--destructive))',
+                foreground: 'rgb(var(--destructive-foreground))'
+              },
+              muted: {
+                DEFAULT: 'rgb(var(--muted))',
+                foreground: 'rgb(var(--muted-foreground))'
+              },
+              accent: {
+                DEFAULT: 'rgb(var(--accent))',
+                foreground: 'rgb(var(--accent-foreground))'
+              },
+              popover: {
+                DEFAULT: 'rgb(var(--popover))',
+                foreground: 'rgb(var(--popover-foreground))'
+              },
+              card: {
+                DEFAULT: 'rgb(var(--card))',
+                foreground: 'rgb(var(--card-foreground))'
+              },
+              theme: {
+                  primary: { 50: 'rgb(var(--theme-primary-50))', 100: 'rgb(var(--theme-primary-100))', 200: 'rgb(var(--theme-primary-200))', 300: 'rgb(var(--theme-primary-300))', 400: 'rgb(var(--theme-primary-400))', 500: 'rgb(var(--theme-primary-500))', 600: 'rgb(var(--theme-primary-600))', 700: 'rgb(var(--theme-primary-700))', 800: 'rgb(var(--theme-primary-800))', 900: 'rgb(var(--theme-primary-900))', 950: 'rgb(var(--theme-primary-950))' }
+              }
+            },
+            borderRadius: {
+              lg: `var(--radius)`,
+              md: `calc(var(--radius) - 2px)`,
+              sm: `calc(var(--radius) - 4px)`
+            },
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.5.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "papaparse": "https://aistudiocdn.com/papaparse@^5.5.3",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router": "https://aistudiocdn.com/react-router@^7.9.5"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-foreground antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
